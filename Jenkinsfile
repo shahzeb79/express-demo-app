@@ -6,6 +6,9 @@ node {
 
   checkout scm
 
+  stage 'Run unit and integration tests'
+  sh("grunt test")
+
   stage 'Docker Login'
   sh("docker login --username=shahzeb799 --password=Shani@123")
   
