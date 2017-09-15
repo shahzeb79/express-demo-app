@@ -17,8 +17,6 @@ app only focuses on server-side JavaScript testing.
 
 * Clone the repo
 * Install dependencies with `npm install`
-* Run development server with `grunt` and go here:
-[http://localhost:3000/](http://localhost:3000/)
 
 
 ## Running Tests
