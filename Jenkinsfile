@@ -6,11 +6,6 @@ node {
 
   checkout scm
 
-  stage 'Run unit and integration tests'
-  env.NODEJS_HOME = "${tool 'Node 8.5.0'}"
-  env.PATH="${env.NODEJS_HOME}:${env.PATH}" // on windows node use ;
-  sh 'npm --version'
-
   stage 'Docker Login'
   sh("docker login --username=shahzeb799 --password=Shani@123")
   
