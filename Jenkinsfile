@@ -7,6 +7,7 @@ node {
   checkout scm
 
   stage 'Run unit and integration tests'
+  sh("npm install -g grunt-cli")
   sh("grunt test")
 
   stage 'Docker Login'
