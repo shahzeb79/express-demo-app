@@ -7,10 +7,9 @@ node {
   checkout scm
 
   stage 'Run unit and integration tests'
-  sh("curl --silent --location https://rpm.nodesource.com/setup_6.x | bash -")
-  sh("yum -y install nodejs")
-  sh("npm install -g grunt-cli")
-  sh("grunt test")
+  env.NODEJS_HOME = "${tool 'Node 8.5.0'}"
+  env.PATH="${env.NODEJS_HOME}:${env.PATH}" // on windows node use ;
+  sh 'npm --version'
 
   stage 'Docker Login'
   sh("docker login --username=shahzeb799 --password=Shani@123")
