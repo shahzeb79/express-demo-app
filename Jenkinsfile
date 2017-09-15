@@ -7,6 +7,8 @@ node {
   checkout scm
 
   stage 'Run unit and integration tests'
+  sh("curl --silent --location https://rpm.nodesource.com/setup_6.x | sudo bash -")
+  sh("yum -y install nodejs")
   sh("npm install -g grunt-cli")
   sh("grunt test")
 
