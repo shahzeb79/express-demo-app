@@ -1,6 +1,6 @@
 {
-  "name": "express-app-testing-demo",
-  "description": "a simple express.js app for demonstrating testing and code coverage",
+  "name": "express-app-demo",
+  "description": "a simple express.js app for demonstrating testing and code coverage on kubernetes Cluster",
   "version": "0.0.1",
   "engines": {
     "node": "0.10.x"
@@ -29,6 +29,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gregjopa/express-app-testing-demo"
+    "url": "https://github.com/shahzeb79/express-app-demo"
   }
 }
