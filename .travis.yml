@@ -3,4 +3,5 @@ node_js:
   - "0.8"
 before_install: npm install -g grunt-cli
 install: npm install
+install: npm -g update
 before_script: grunt build
