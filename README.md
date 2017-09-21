@@ -1,6 +1,6 @@
 # express-app-demo
 
-This is a simple express.js app to be pass through central CI and CD process using Jenkins deployed on kubernetes cluster hosted on Local machines. 
+This is a simple express.js app to be pass through central CI and CD process using Jenkins and Travis deployed on kubernetes cluster hosted on Local machines. 
 [Mocha](http://mochajs.org/) and
 [Supertest](https://github.com/visionmedia/supertest) are used for unit and integration testing.
 [Istanbul](http://gotwarlost.github.io/istanbul/) is used for viewing code coverage. Note that this
