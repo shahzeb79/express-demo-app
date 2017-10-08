@@ -14,9 +14,6 @@ node {
 
   stage 'Push image to registry'
   sh("docker push ${imageTag}")
-  
-  stage "Clean Deployments"
-  sh("kubectl delete deployment ${appName} --namespace=production")
 
   stage "Deploy Application"
   switch (env.BRANCH_NAME) {
