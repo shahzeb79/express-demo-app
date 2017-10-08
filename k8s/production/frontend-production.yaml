@@ -1,25 +1,25 @@
 kind: Deployment
 apiVersion: extensions/v1beta1
 metadata:
-  name: expressapp
+  name: expressapp1
 spec:
   replicas:
   template:
     metadata:
-      name: expressapp
+      name: expressapp1
       labels:
-        app: expressapp
-        role: expressapp
+        app: expressapp1
+        role: expressapp1
         env: production
     spec:
       containers:
-      - name: expressapp
-        image: shahzeb799/expressapp:latest
+      - name: expressapp1
+        image: shahzeb799/expressapp1:latest
         resources:
           limits:
             memory: "500Mi"
             cpu: "100m"
         imagePullPolicy: Always
         ports:
-        - name: expressapp
+        - name: expressapp1
           containerPort: 3000

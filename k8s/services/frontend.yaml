@@ -1,15 +1,18 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: expressapp
+  name: expressapp1
 spec:
   type: LoadBalancer
   ports:
   - name: http
     port: 80
     targetPort: 3000
-  externalIPs:
-  - 35.196.246.48
+  loadBalancerIP: 35.196.246.45
   selector:
-    app: expressapp
-    role: expressapp
+    app: expressapp1
+    role: expressapp1
+status:
+  loadBalancer:
+    ingress:
+    - ip: 35.196.246.45

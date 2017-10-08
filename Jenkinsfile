@@ -1,7 +1,7 @@
 node {
   def project = 'umapp-cluster'
-  def appName = 'expressapp'
-  def feSvcName = "expressapp"
+  def appName = 'expressapp1'
+  def feSvcName = "expressapp1"
   def imageTag = "shahzeb799/${appName}:latest"
 
   checkout scm
@@ -24,7 +24,7 @@ node {
         // Change deployed image in canary to the one we just built
         sh("kubectl --namespace=production apply -f k8s/services/")
         sh("kubectl --namespace=production apply -f k8s/production/")
-        sh("echo http://`kubectl --namespace=production get service/expressapp --output=json | jq -r '.status.loadBalancer.ingress[0].ip'` > ${feSvcName}")
+        sh("echo http://`kubectl --namespace=production get service/expressapp1 --output=json | jq -r '.status.loadBalancer.ingress[0].ip'` > ${feSvcName}")
         break
     case "develop":
         // Change deployed image in canary to the one we just built
@@ -37,7 +37,7 @@ node {
     default:
         sh("kubectl --namespace=production apply -f k8s/services/")
         sh("kubectl --namespace=production apply -f k8s/production/")
-        sh("echo http://`kubectl --namespace=production get service/expressapp --output=json | jq -r '.status.loadBalancer.ingress[0].ip'` > ${feSvcName}")
+        sh("echo http://`kubectl --namespace=production get service/expressapp1 --output=json | jq -r '.status.loadBalancer.ingress[0].ip'` > ${feSvcName}")
         break
   }
 }
